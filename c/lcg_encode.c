@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main() {
+    int i;
+    uint8_t a;
+    uint8_t c;
+    uint8_t x;
+    uint8_t seed;
+
+    printf("Input seed: ");
+    scanf("%hhu", &seed);
+
+    printf("Input a: ");
+    scanf("%hhu", &a);
+
+    printf("Input c: ");
+    scanf("%hhu", &c);
+
+    int n = 1000;  // max lenght of the sequence
+    char* message = calloc(n, sizeof(char));
+
+    fgets(message, n, stdin);
+    printf("Input message: ");
+    message = fgets(message, n, stdin);
+    message[strcspn(message, "\n")] = '\0';
+    n = strlen(message);
+
+    char* encMessage = calloc(n, sizeof(char));
+
+    // message encoding
+    x = seed;
+    for (int i = 0; i < n; i++) {
+        x = a * x + c;
+        encMessage[i] = (message[i] ^ x);
+    }
+
+    printf("\n");
+    printf("Encoded message:\n%s\n", encMessage);
+
+    printf("\n");
+    printf("Encoded message size: %d\n", n);
+
+    printf("\n");
+    printf("Encoded message numerical:\n");
+    for (i = 0; i < n; i++) {
+        printf("%hhu ", encMessage[i]);
+    }
+
+    return 0;
+}
