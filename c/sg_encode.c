@@ -27,7 +27,7 @@ int main() {
 
     // message encoding
     for (i = 55; i < n + 55; i++) {
-        x = (xs[(i - 24) % 55] - xs[(i - 55) % 55]);
+        x = xs[31] - xs[0];
         for (int j = 0; j < 54; j++) {
             xs[j] = xs[j + 1];
         }
@@ -36,7 +36,6 @@ int main() {
         // printf("%d ",x);
     }
 
-    printf("Encoded message: %s\n", encMessage);
 
     printf("\n");
     printf("Encoded message size: %d\n", n);

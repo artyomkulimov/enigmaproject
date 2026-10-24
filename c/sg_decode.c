@@ -24,14 +24,14 @@ int main() {
         scanf("%hhu", &encMessage[i]);
     }
 
-    char* decMessage = calloc(n, sizeof(char));
+    char* decMessage = calloc(n + 1, sizeof(char));
 
     // message decoding
     for (i = 0; i < 55; i++) {
         xs[i] = keys[i];
     }
     for (i = 55; i < n + 55; i++) {
-        x = xs[(i - 24) % 55] - xs[(i - 55) % 55];
+        x = xs[31] - xs[0];
         for (int j = 0; j < 54; j++) {
             xs[j] = xs[j + 1];
         }

@@ -37,7 +37,6 @@ int main() {
     }
 
     printf("\n");
-    printf("Encoded message:\n%s\n", encMessage);
 
     printf("\n");
     printf("Encoded message size: %d\n", n);

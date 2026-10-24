@@ -28,7 +28,7 @@ int main() {
         scanf("%hhu", &encMessage[i]);
     }
 
-    char* decMessage = calloc(n, sizeof(char));
+    char* decMessage = calloc(n + 1, sizeof(char)); // reserve an extra byte for the end of the string marker(\0)
 
     // message decoding
     x = seed;
