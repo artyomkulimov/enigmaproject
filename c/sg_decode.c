@@ -4,6 +4,7 @@
 
 int main() {
     int i;
+    // generator's variables
     uint8_t* keys = calloc(55, sizeof(uint8_t));
     uint8_t* xs = calloc(55, sizeof(uint8_t));
     uint8_t x, r;
@@ -19,7 +20,7 @@ int main() {
     scanf("%d", &n);
 
     char* encMessage = calloc(n, sizeof(char));
-    printf("Input encoded message numerical: ");
+    printf("Input encoded message bytes: ");
     for (i = 0; i < n; i++) {
         scanf("%hhu", &encMessage[i]);
     }
@@ -31,6 +32,7 @@ int main() {
         xs[i] = keys[i];
     }
     for (i = 55; i < n + 55; i++) {
+        // generating a new byte
         x = xs[31] - xs[0];
         for (int j = 0; j < 54; j++) {
             xs[j] = xs[j + 1];

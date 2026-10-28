@@ -4,6 +4,7 @@
 
 int main() {
     int i;
+    // generator's variables
     uint8_t a;
     uint8_t c;
     uint8_t x;
@@ -32,17 +33,13 @@ int main() {
     // message encoding
     x = seed;
     for (int i = 0; i < n; i++) {
+        // generating a new byte
         x = a * x + c;
         encMessage[i] = (message[i] ^ x);
     }
 
-    printf("\n");
-
-    printf("\n");
     printf("Encoded message size: %d\n", n);
-
-    printf("\n");
-    printf("Encoded message numerical:\n");
+    printf("Encoded message bytes:\n");
     for (i = 0; i < n; i++) {
         printf("%hhu ", encMessage[i]);
     }

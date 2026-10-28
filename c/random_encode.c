@@ -4,8 +4,9 @@
 
 int main() {
     int i;
-    uint8_t seed, x;
+    uint8_t seed, x; // generator's variables
 
+    // reading the input
     printf("Input seed: ");
     scanf("%hhu", &seed);
 
@@ -23,17 +24,13 @@ int main() {
     // message encoding
     srand(seed);
     for (int i = 0; i < n; i++) {
+        // generating a new byte
         x = rand() % 256;
         encMessage[i] = (message[i] ^ x);
     }
 
-    printf("\n");
-
-    printf("\n");
     printf("Encoded message size: %d\n", n);
-
-    printf("\n");
-    printf("Encoded message numerical:\n");
+    printf("Encoded message bytes:\n");
     for (i = 0; i < n; i++) {
         printf("%hhu ", encMessage[i]);
     }
