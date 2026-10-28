@@ -11,7 +11,7 @@ int advanced_rand(int n){
     return ( rand() > (RAND_MAX / 2) );
 }
 
-int main(){
+int main(void){
     int seed = 42;
     int r,n,m;
 

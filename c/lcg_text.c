@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main() {
+int main(void) {
     int i;
     uint8_t a;
     uint8_t c;

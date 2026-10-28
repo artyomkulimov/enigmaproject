@@ -10,7 +10,7 @@ uint32_t* getRandomMessage(int n) {
     return mes;
 }
 
-int main() {
+int main(void) {
     uint32_t* keys = calloc(55, sizeof(uint32_t));
     uint32_t* xs = calloc(55, sizeof(uint32_t));
     uint32_t x, r;

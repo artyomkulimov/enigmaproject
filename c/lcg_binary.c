@@ -10,7 +10,7 @@ uint32_t* getRandomMessage(int n) {
     return mes;
 }
 
-int main() {
+int main(void) {
     uint32_t seed = 21403;
     uint32_t a = 5;
     uint32_t c = 3;

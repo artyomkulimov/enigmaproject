@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main() {
+int main(void) {
     int i;
     uint8_t* keys = calloc(55, sizeof(uint8_t));
     uint8_t* xs = calloc(55, sizeof(uint8_t));

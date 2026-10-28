@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main() {
+int main(void) {
     int i;
     uint8_t seed, x; // generator's variables
 
